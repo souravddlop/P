@@ -682,13 +682,13 @@ async def show_stats(update: Update, context: CallbackContext):
     total_running_attacks = len(running_attacks)
 
     stats_msg = (
-        "📊 *Bot Statistics:*
-\n"
-        f"👥 *Resellers:* {total_resellers}\n"
-        f"💣 *Running Attacks:* {total_running_attacks}\n"
-        f"📢 *Pending Feedback:* {total_feedback_pending}\n"
-        f"👥 *Allowed Groups:* {total_allowed_groups}\n"
-    )
+    "📊 *Bot Statistics:*\n"
+    f"👥 *Resellers:* {total_resellers}\n"
+    f"💣 *Running Attacks:* {total_running_attacks}\n"
+    f"📢 *Pending Feedback:* {total_feedback_pending}\n"
+    f"👥 *Allowed Groups:* {total_allowed_groups}\n"
+)
+
 
     await update.message.reply_text(stats_msg, parse_mode='Markdown')
 
